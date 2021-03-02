@@ -1,0 +1,82 @@
+// Colors
+$colBlue: #35495E;
+$colRed: #FF3E17;
+$colWhite: #fff;
+$colBlack: #000;
+$colGrayDark: #BDC0C2;
+$colGray: #f2f2f2;
+$col-border-grid-tab: rgba(50, 50, 50, .1);
+
+$colGrayTr: rgba(255, 255, 255, 0.3);
+
+// $gridTabBorder: rgba(50, 50, 50, .15);
+
+$headerGradient: linear-gradient(rgb(0, 0, 0) -6.85%, rgba(0, 0, 0, 0) 100%);
+// $boxShadow: 0 0 15px 0 rgba(50,50,50,.15);
+
+$gradientHomeControlTop: linear-gradient(to bottom, rgba(53,73,94,.8), rgba(53,73,94,.7),  rgba(53,73,94,.5),  rgba(53,73,94,.3), rgba(53,73,94,0));
+$gradientHomeControlBottom: linear-gradient(to top, rgba(53,73,94,.8), rgba(53,73,94,.7),  rgba(53,73,94,.5),  rgba(53,73,94,.3), rgba(53,73,94,0));
+// $gradientHomeControlTop: linear-gradient(to bottom, rgba(189,192,194,8), rgba(189,192,194,.7),  rgba(189,192,194,.5),  rgba(189,192,194,.3), rgba(189,192,194,0));
+// $gradientHomeControlBottom: linear-gradient(to top, rgba(189,192,194,8), rgba(189,192,194,.7),  rgba(189,192,194,.5),  rgba(189,192,194,.3), rgba(189,192,194,0));
+
+// Shadows
+$shadowCompareControls: -8px 0 10px #e5e5e5;
+$shadowCompareSpecs: 8px 0 10px #e5e5e5;
+$shadowHeader: 0px 4px 30px 6px rgba(0, 0, 0, 0.07);
+$shadowHeaderLeft: -8px 0 10px #e5e5e5;
+$shadow-grid-tab: 0 0 1px 1px rgba(50, 50, 50, .1);
+$shadow-products-hover: 0 0 15px 1px rgba(50, 50, 50, .4);
+$shadow-compare-specs-hover: 0 2px 5px 0 rgba(50, 50, 50, .3), 0 -2px 5px 0 rgba(50, 50, 50, .3);
+
+// Animations
+$animHomeSlidesAndRouter: opacity .4s ease-in;
+$animButtons: border-color .2s ease-in, color .2s ease-in, background-color .2s ease-in;
+// $animLinks: color .2s ease-out;
+$animLinks: color .2s ease-out;
+$animFill: fill .2s ease-out;
+$animHomeControls: opacity .2s ease-out;
+$animHomeControlIcons: margin .2s ease-out .2s, opacity .2s ease-out;
+$animGridTabsProducts: box-shadow .2s ease-out;
+$animGridTabsSingleItem: background-color .2s ease-out;
+$animCompareControls: height .3s ease-out;
+$anim-header-catalog: transform .3s ease-out;
+$anim-header-mobile: transform .3s ease-out;
+
+// Sizes
+$phone: 375px;
+$largePhone: 475px;
+$tablet: 768px;
+$largeTablet: 1024px;
+$desktop: 1200px;
+$largeDesktop: 1440px;
+
+$content: 1000px;
+
+$headerWidth: 40px;
+$headerHeight: 60px;
+
+// Fonts
+$ffMain: RobotoCondensed, Arial, serif;
+$ffSec: Roboto, Arial, serif;
+
+$base-font-size: 8px;
+$base-font-size-large-phone: 10px;
+$base-font-size-tablet: 12px;
+$base-font-size-large-tablet: 14px;
+$base-font-size-desktop: 16px;
+$base-font-weight: 400;
+
+$fzH1: 3rem;
+$fzH2: 3rem;
+$fzH3: 1.5rem;
+$fzH4: 22px;
+$fzH5: 20px;
+$fzH6: 16px;
+$fzPar: 1rem;
+$fzNavLink: 14px;
+
+$lhH1: 4rem;
+$lhH2: 4rem;
+$lhH3: 2rem;
+$lhH6: 24px;
+$lhPar: 1.5rem;

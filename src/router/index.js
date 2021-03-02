@@ -4,20 +4,65 @@ import Home from '../views/Home.vue';
 
 Vue.use(VueRouter);
 
+const homeParams = (route) => ({
+  slideId: Number(route.params.slideId),
+});
+const groupsPageParams = (route) => ({
+  categoryId: Number(route.params.categoryId),
+});
+const singleProductPageParams = (route) => ({
+  productId: Number(route.params.productId),
+});
+
 const routes = [
   {
     path: '/',
     name: 'Home',
+    props: homeParams,
     component: Home,
   },
   {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue'),
+    path: '/store',
+    name: 'StorePage',
+    component: () => import(/* webpackChunkName: "StorePage" */ '../views/StorePage.vue'),
   },
+  {
+    path: '/categories',
+    name: 'CategoriesPage',
+    component: () => import(/* webpackChunkName: "CategoriesPage" */ '../views/CategoriesPage.vue'),
+  },
+  {
+    path: '/:categoryId/groups',
+    name: 'GroupsPage',
+    props: groupsPageParams,
+    component: () => import(/* webpackChunkName: "GroupsPage" */ '../views/GroupsPage.vue'),
+  },
+  {
+    path: '/config',
+    name: 'ConfigPage',
+    component: () => import(/* webpackChunkName: "ConfigPage" */ '../views/ConfigPage.vue'),
+  },
+  {
+    path: '/cart',
+    name: 'CartPage',
+    component: () => import(/* webpackChunkName: "CartPage" */ '../views/CartPage.vue'),
+  },
+  {
+    path: '/compare',
+    name: 'ComparePage',
+    component: () => import(/* webpackChunkName: "ComparePage" */ '../views/ComparePage.vue'),
+  },
+  {
+    path: '/product/:productId',
+    name: 'SingleProductPage',
+    props: singleProductPageParams,
+    component: () => import(/* webpackChunkName: "SingleProductPage" */ '../views/SingleProductPage.vue'),
+  },
+  // {
+  //   path: '/about',
+  //   name: 'About',
+  //   component: () => import(/* webpackChunkName: "about" */ '../views/About.vue'),
+  // },
 ];
 
 const router = new VueRouter({

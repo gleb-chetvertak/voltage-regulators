@@ -1,0 +1,118 @@
+// Grid
+@mixin root-container {
+  max-width: 1370px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet) {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+}
+
+@mixin root-container-fluid {
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+@mixin flex-row($cg: 0) {
+  display: flex;
+  column-gap: $cg;
+}
+
+@mixin flex-col-equal($n: 2, $cg: 30px) {
+  flex: 1 1 calc((100% / #{$n}) - #{$cg});
+}
+
+@mixin grid-tab() {
+  box-shadow: $shadow-grid-tab;
+}
+
+// Modules
+
+@mixin home-slide-container {
+  min-height: calc(100vh - #{$headerWidth});
+  padding-top: 20px;
+  padding-bottom: 20px;
+  @media (min-width: $tablet) {
+    padding-top: 40px;
+  }
+}
+
+@mixin home-h2 {
+  margin: 0 auto 20px;
+  text-align: center;
+  @media (min-width: $tablet) {
+    margin-bottom: 55px;
+  }
+}
+
+@mixin form-input-wrapper($mb: 25px) {
+  position: relative;
+  margin-bottom: $mb;
+}
+
+@mixin form-input($w: auto, $py: 15px, $px: 11px, $bw: 1px, $mb: 0, $fz: 16px) {
+  width: $w;
+  height: auto;
+  padding: $py $px;
+  border-radius: 4px;
+  margin-bottom: $mb;
+  box-sizing: border-box;
+  font-size: $fz;
+  overflow: hidden;
+  resize: none;
+
+  &,
+  &:focus {
+    border: $bw solid $colBlue;
+    margin-bottom: $mb;
+    box-shadow: none;
+    outline: none;
+  }
+
+  &:focus {
+    border-color: $colRed;
+  }
+
+  &::placeholder {
+    color: $colBlue;
+    opacity: .5;
+  }
+  
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+  }
+
+  &[type=number] {
+      -moz-appearance:textfield;
+  }
+}
+
+// @mixin form-checkbox {
+
+// }
+
+@mixin required-field-sign {
+  color: $colRed;
+}
+
+@mixin form-error-message {
+  position: absolute;
+  top: calc(100% + 5px);
+  font-size: 12px;
+  line-height: 12px;
+  color: $colRed;
+}
+
+@mixin no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
